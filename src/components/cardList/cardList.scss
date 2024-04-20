@@ -1,0 +1,106 @@
+@import "../../assets/scss/variables";
+
+.main-card-container {
+  //   display: flex;
+  border: 1px solid $border-color;
+  position: relative;
+  width: 350px;
+  height: auto;
+  border-radius: 10px;
+  padding: 3px;
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .image-conatiner {
+    position: relative;
+    .food-container {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(90deg, #9f9aeb 0%, #4a35a2 101%);
+      border: 1px solid white;
+      padding: 5px;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      z-index: 2;
+      top: 5%;
+      gap: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      color: white;
+    }
+    .card-image {
+      width: 350px;
+      height: auto;
+      img {
+        width: 100%;
+        height: 250px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+      }
+    }
+    .genderType {
+      display: flex;
+      position: absolute;
+      align-items: center;
+      background: linear-gradient(106deg, #0b7dff -66.2%, #0d264f 93.26%);
+      gap: 8px;
+      border-top-right-radius: 10px;
+      border: 1px solid white;
+
+      // border-bottom-right-radius: 10px;
+      padding: 5px;
+      z-index: 2;
+      bottom: 1%;
+      color: white;
+    }
+  }
+  .content {
+    padding: 5px;
+
+    .MainHeading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .loaction {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 18px;
+      font-weight: 500;
+      color: #909090;
+      margin-bottom: 5px;
+    }
+    .price {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-left: 5px;
+      font-size: 16px;
+      font-weight: 800;
+    }
+  }
+}
+
+
+.grid-item {
+  background-color: #f0f0f0;
+  padding: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* Tablet: 2 columns */
+  }
+}
+
+@media (max-width: 576px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Mobile: 1 column */
+  }
+}

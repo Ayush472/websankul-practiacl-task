@@ -1,0 +1,114 @@
+@import "../../assets/scss/variables";
+.main-navbar {
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  margin-bottom: 1rem;
+  li {
+    list-style-type: none;
+  }
+  padding: 0px 30px;
+  .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .navbar-brand {
+      img {
+        width: 100%;
+      }
+    }
+    .nav-list {
+      gap: 10px;
+      display: flex;
+      align-items: center;
+      .nav-item {
+        .saved-button {
+          border: 2px solid $primary;
+          background: $background-div;
+          color: $secondary;
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          width: 100px;
+          justify-content: space-around;
+          padding: 5px;
+          font-size: 16px;
+          font-weight: 600;
+        }
+        .text-button {
+          font-weight: 700;
+          border-radius: 60px;
+          width: 30px;
+          background: $background-div;
+          height: 30px;
+          border: 1px solid $border-color;
+          color: $primary;
+          font-size: 18px;
+        }
+        .investore {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1px;
+          font-size: 18px;
+          .newBtn {
+            border-radius: 5px;
+            background: linear-gradient(45deg, #4db6ac, #226360);
+            margin-top: -20px;
+            color: white;
+            padding: 3px;
+            font-size: 16px;
+          }
+        }
+      }
+      .border {
+        border: 1px solid;
+        margin: 5px;
+        height: 15px;
+        border-color: #c1c2c1c2;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  //Put your CSS here for 200px to 767px width devices (cover all width between 200px to 767px //
+  .main-navbar {
+    padding: 0px 15px;
+    .container-fluid {
+      .navbar-brand {
+        img {
+          width: 110px;
+        }
+      }
+      .nav-list {
+        .nav-item {
+          .saved-button {
+            width: 80px;
+            padding: 4px;
+            img {
+              width: 20px;
+            }
+            font-size: 14px;
+          }
+        }
+        .border,
+        .investore-item {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  //Put your CSS here for 200px to 767px width devices (cover all width between 200px to 767px //
+  .navbar-brand {
+    img {
+      width: 110px;
+    }
+  }
+  .border,
+  .investore-item {
+    display: none;
+  }
+}
